@@ -1,0 +1,5 @@
+bootstrap_servers: "10.1.8.200:9092,10.1.8.201:9092,10.1.8.202:9092"
+group_id: "test"
+kafka_username: "admin"
+kafka_password: "admin"
+consumergroups_properties: "D:\\Document\\Workspaces\\Git\\FujianBI\\etl-jstorm\\nl-rt-jstorm-fujianbi-tool\\src\\test\\resources\\consumergroups.properties"

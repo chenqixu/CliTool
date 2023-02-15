@@ -1,0 +1,36 @@
+kafkaconf.bootstrap.servers: "10.1.8.200:9092,10.1.8.202:9092"
+kafkaconf.key.deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+kafkaconf.value.deserializer: "org.apache.kafka.common.serialization.ByteArrayDeserializer"
+kafkaconf.security.protocol: "SASL_PLAINTEXT"
+kafkaconf.sasl.mechanism: "PLAIN"
+#注意：需要申请一个专门用于核查的消费组
+kafkaconf.group.id: "test"
+kafkaconf.enable.auto.commit: "false"
+kafkaconf.fetch.min.bytes: "52428800"
+kafkaconf.max.poll.records: "12000"
+kafkaconf.newland.kafka_username: admin
+kafkaconf.newland.kafka_password: admin
+kafkaconf.newland.consumer.mode: fromBeginning
+#kafkaconf.newland.schema.mode: URL
+#kafkaconf.newland.schema.mode: FILE
+kafkaconf.newland.schema.mode: NOAVRO
+#kafkaconf.newland.schema.file: "d:/Work/实时/ADB/KafkaToAdb/avro/ogg-schema/FRTBASE.TB_SER_OGG_BROADBAND_MOP_MANAGER.avsc"
+kafkaconf.newland.schema.cluster.name: "kafka10"
+kafkaconf.newland.schema.group.id: "grpid_nl_dun_notify_result_v1"
+kafkaconf.newland.schema.url: "http://10.1.8.200:8080/SchemaService/getSchema?t="
+kafkaconf.newland.print.cnt: 10
+#话题，必填
+topic: NMC_FLAT_B_DUN_NOTIFY_RESULT_R_I_V1
+#操作类型：i、u、d，或者不填
+op_type:
+#查询模式
+#queryOggBefore，查询ogg的before里的数据
+#queryOggAfter，查询ogg的after里的数据
+#normal 或者 不填，用于查询扁平化里的数据，扁平化后，字段和op_type是同级的
+#queryNoAVRO，不使用avro方式
+mode: queryNoAVRO
+#mode: queryOggAfter
+#查询条件，可以不填
+#where_case: USER_ID=591305002979620
+#注意，ogg查询的时候不能设置输出字段
+print_field:

@@ -1,0 +1,21 @@
+ogg_topic_name: "NMC_TB_B_DUN_NOTIFY_RESULT_R_I_V1"
+flat_topic_name: "NMC_FLAT_B_DUN_NOTIFY_RESULT_R_I_V1"
+file_path: "d:\\Work\\实时\\业务智能互动式语音\\avro\\"
+file_name: "NMC_TB_B_DUN_NOTIFY_RESULT_R_I_V1.avsc"
+cluster_name: "kafka10"
+group_id: "grpid_nl_dun_notify_result_v1"
+ogg_schema: ""
+avsc_type: FILE
+dbbeans:
+  - name: srcBean
+    user_name: "web"
+    pass_word: "T%vdNV#i$2"
+    tns: "jdbc:oracle:thin:@10.1.0.242:1521/ywxx"
+    dbType: "ORACLE"
+ftpbeans:
+  - name: oggSftp
+    type: SFTP
+    user_name: "kafka"
+    pass_word: "foiwO#S7"
+    host: "10.1.8.200"
+    port: 22

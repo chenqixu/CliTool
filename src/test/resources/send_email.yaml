@@ -1,0 +1,16 @@
+email_server:
+  host: "10.46.6.145"
+  port: "25"
+  protocol: "smtp"
+  is_ssl: false
+send_account:
+  account: "cqx@fmcc.boss"
+  password: "cqx123"
+receive_account:
+  - "cqx@fmcc.boss"
+  - "cqx@fmcc.boss"
+subject: "test-sub"
+content: "d:\\tmp\\1.txt"
+appendixs:
+  - "d:\\tmp\\1.txt"
+is_debug: true

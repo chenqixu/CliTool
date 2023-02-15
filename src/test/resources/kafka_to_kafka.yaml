@@ -1,0 +1,33 @@
+read_topic: "NMC_TB_B_CUS_USER_PRODUCT_R_I_V1"
+write_topic: "t_dist"
+sync_size: 1
+source_kafka:
+  kafkaconf.bootstrap.servers: "10.1.8.200:9092,10.1.8.202:9092"
+  kafkaconf.key.deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+  kafkaconf.value.deserializer: "org.apache.kafka.common.serialization.ByteArrayDeserializer"
+  kafkaconf.security.protocol: "SASL_PLAINTEXT"
+  kafkaconf.sasl.mechanism: "PLAIN"
+  kafkaconf.group.id: "test"
+  kafkaconf.fetch.min.bytes: "52428800"
+  kafkaconf.max.poll.records: "12000"
+  kafkaconf.newland.kafka_username: admin
+  kafkaconf.newland.kafka_password: admin
+  kafkaconf.newland.consumer.mode: fromBeginning
+  kafkaconf.newland.schema.cluster.name: "kafka10"
+  kafkaconf.newland.schema.group.id: "adb_single"
+  kafkaconf.newland.schema.url: "http://10.1.8.200:8080/SchemaService/getSchema?t="
+dist_kafka:
+  kafkaconf.bootstrap.servers: "10.1.8.200:9092,10.1.8.201:9092,10.1.8.202:9092"
+  kafkaconf.key.serializer: "org.apache.kafka.common.serialization.StringSerializer"
+  kafkaconf.value.serializer: "org.apache.kafka.common.serialization.ByteArraySerializer"
+  kafkaconf.security.protocol: "SASL_PLAINTEXT"
+  kafkaconf.sasl.mechanism: "PLAIN"
+  kafkaconf.newland.kafka_username: admin
+  kafkaconf.newland.kafka_password: admin
+  kafkaconf.acks: "all"
+  kafkaconf.batch.size: "131072"
+  kafkaconf.buffer.memory: "67108864"
+  kafkaconf.linger.ms: "100"
+  kafkaconf.max.request.size: "10485760"
+  kafkaconf.retries: "10"
+  kafkaconf.retry.backoff.ms: "500"

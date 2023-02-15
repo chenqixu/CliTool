@@ -1,0 +1,34 @@
+#=====================
+#nmc_topic
+#=====================
+#tab_fields: "TOPIC_NAME,SCHEMA_NAME,COMMENTS,PARTITION,REPLICAS,CREATE_USER,CREATE_DATE,CLUSTER_NAME,GROUP_ID"
+#tab_name: "nmc_topic"
+#=====================
+#nmc_schema
+#=====================
+#tab_fields: "SCHEMA_NAME,SCHEMA_TYPE,NAME_SPACE,STATUS,CREATE_USER,CREATE_DATE,MODIFY_USER,MODIFY_DATE,COMMENTS,AVSC"
+#tab_name: "nmc_schema"
+#file_name: "d:\\tmp\\data\\oracle_to_file\\nmc_schema"
+#file_split_str: "#OTFT#"
+#file_line_end: "#NEWLAND@BI_LINE_END#"
+#=====================
+#rl_broadband_users
+#=====================
+tab_fields: "home_city,preexit_time,is_change_equip,onu_type"
+tab_name: "rl_broadband_users"
+file_name: "d:\\tmp\\data\\oracle_to_file\\rl_broadband_users"
+src_where:
+thread_num: 1
+fetchSize: 500
+dbbeans:
+#  - name: srcBean
+#    user_name: "web"
+#    pass_word: "T%vdNV#i$2"
+#    tns: "jdbc:oracle:thin:@10.1.0.242:1521/ywxx"
+#    dbType: "ORACLE"
+  - name: srcBean
+    user_name: "frtbase"
+    pass_word: "frtbase"
+    tns: "jdbc:oracle:thin:@10.1.8.204:1521/orapri"
+    dbType: "ORACLE"
+

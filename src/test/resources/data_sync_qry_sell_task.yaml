@@ -1,0 +1,22 @@
+src_tab_name: "qry_sell_task"
+dst_tab_name: "qry_sell_task"
+tab_fields: "sell_id,task_id,sell_place,sell_address,longitude,latitude,sell_start_time,sell_end_time,day_start_time,day_end_time,sell_count,create_time,crt_user_id,crt_user_phone,crt_user_name,source,crt_status,chnl_id,sell_name,phone_if,sell_loc,is_end,min_start_time,min_end_time"
+src_where: "create_time between to_timestamp('[_data_pre_hour]0000','yyyymmddhh24miss') and to_timestamp('[_data_pre_hour]5959','yyyymmddhh24miss')"
+dst_submit: 2000
+dst_thread_num: 1
+sync_type: "MERGE_INTO_UPDATE"
+#sync_type: "MERGE_INTO_ONLY"
+#sync_type: "DELETE"
+pks: "sell_id,crt_status"
+#pks: ""
+dbbeans:
+  - name: srcBean
+    user_name: "mktbi"
+    pass_word: "H%OwNn#q$8"
+    tns: "jdbc:oracle:thin:@10.1.0.242:1521/ywxx"
+    dbType: "ORACLE"
+  - name: dstBean
+    user_name: "label_core"
+    pass_word: "admin"
+    tns: "jdbc:postgresql://10.1.8.206:5432/label_core"
+    dbType: "POSTGRESQL"

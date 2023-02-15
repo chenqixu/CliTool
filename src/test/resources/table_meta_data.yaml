@@ -1,0 +1,8 @@
+tab_name: "LOCATE_MART_ROTATE_TAB"
+dbbeans:
+  - name: srcBean
+    user_name: "frtbase"
+    pass_word: "frtbase"
+    tns: "jdbc:oracle:thin:@10.1.8.204:1521/orapri"
+    dbType: "ORACLE"
+

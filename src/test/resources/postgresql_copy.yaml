@@ -1,0 +1,24 @@
+#=====================
+#rl_broadband_mop_manager
+#=====================
+#copy_file_path: "d:\\Work\\实时\\ADB\\KafkaToAdb\\data\\rl_broadband_mop_manager"
+#copy_file_key: "data"
+#copy_file_endwith: "txt"
+#table_name: "rl_broadband_mop_manager"
+#delimiter: ","
+#quote: "\""
+#=====================
+#rl_broadband_users_2022
+#=====================
+copy_file_path: "d:\\tmp\\data\\postgresql"
+copy_file_key: "tag_tmp_data2"
+copy_file_endwith: ""
+table_name: "test2"
+delimiter: "\u0002"
+#quote: ""
+dbbeans:
+  - name: srcBean
+    user_name: "label_core"
+    pass_word: "admin"
+    tns: "jdbc:postgresql://10.1.8.206:5432/label_core"
+    dbType: "POSTGRESQL"

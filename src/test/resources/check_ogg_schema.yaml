@@ -1,0 +1,16 @@
+ogg_topic_name: "USER_ADDITIONAL_INFO"
+file_path: "/bi/user/cqx/data/avsc/"
+file_name: "FRTBASE.TB_SER_OGG_USER_ADDI_INFO.avsc"
+dbbeans:
+  - name: srcBean
+    user_name: "web"
+    pass_word: "T%vdNV#i$2"
+    tns: "jdbc:oracle:thin:@10.1.0.242:1521/ywxx"
+    dbType: "ORACLE"
+ftpbeans:
+  - name: oggSftp
+    type: SFTP
+    user_name: "edc_base"
+    pass_word: "fLyxp1s*"
+    host: "10.1.8.203"
+    port: 22

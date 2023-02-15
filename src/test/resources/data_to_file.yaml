@@ -1,0 +1,21 @@
+tab_fields: "topic_name,schema_name,comments,partition,replicas,create_user,create_date,cluster_name"
+tab_name: "web.nmc_topic@ywxx_web"
+src_where:
+file_name: "D:\\Document\\Workspaces\\Git\\FujianBI\\etl-jstorm\\nl-rt-jstorm-fujianbi-tool\\target\\data.txt"
+dbbeans:
+#  - name: srcBean
+#    user_name: "suyan"
+#    pass_word: "suyan"
+#    tns: "jdbc:mysql://10.1.8.200:3306/suyan_perf?useUnicode=true"
+#    dbType: "MYSQL"
+#  - name: srcBean
+#    user_name: "sentry"
+#    pass_word: "sentry"
+#    tns: "jdbc:postgresql://10.1.8.206:5432/sentry"
+#    dbType: "POSTGRESQL"
+  - name: srcBean
+    user_name: "bishow"
+    pass_word: "C%MuhN#q$4"
+    tns: "jdbc:oracle:thin:@10.1.0.242:1521/ywxx"
+    dbType: "ORACLE"
+

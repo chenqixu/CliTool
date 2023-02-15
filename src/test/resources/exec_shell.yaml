@@ -1,0 +1,5 @@
+cmd:
+  - "dir c:\\"
+  - "del D:\\Document\\Workspaces\\Git\\FujianBI\\etl-jstorm\\nl-rt-jstorm-fujianbi-tool\\target\\data0.txt"
+  - "del D:\\Document\\Workspaces\\Git\\FujianBI\\etl-jstorm\\nl-rt-jstorm-fujianbi-tool\\target\\data1.txt"
+file.encoding: "GBK"

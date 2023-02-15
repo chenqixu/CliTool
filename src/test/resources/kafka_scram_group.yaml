@@ -1,0 +1,6 @@
+bootstrap_servers: "10.1.8.200:9093,10.1.8.201:9093,10.1.8.202:9093"
+group_id: "test-group"
+kafka_username: "newland"
+kafka_password: "123456"
+sasl.mechanism: "SCRAM-SHA-256"
+consumergroups_properties: "I:\\Document\\Workspaces\\Git\\FujianBI\\etl-jstorm\\nl-rt-jstorm-fujianbi-tool\\src\\test\\resources\\consumergroups_scram.properties"

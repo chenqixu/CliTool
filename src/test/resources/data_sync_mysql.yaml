@@ -1,0 +1,26 @@
+#src_tab_name: "t_tenant_sc"
+#dst_tab_name: "sm2_rsmgr_t_tenant_sc"
+#tab_fields: "id,batchno,tenant_id,parent_tenant_id,tenant_name,leaftenant,tenant_describe,queue_name,min_memory,min_vcores,max_memory,max_vcores,used_memory,used_vcores,reserve_memory,reserve_vcores,collect_time,update_time"
+#src_where: "batchno='2b86f577817249598737d340095febb5'"
+#pks: "id,batchno,tenant_id"
+src_tab_name: "t_queue_sc"
+dst_tab_name: "sm2_rsmgr_t_queue_sc"
+tab_fields: "collect_time,update_time"
+src_where: "batchno='ad39e0a5516047f39a302825faa0ac1b'"
+pks: "id,batchno,queue_name,user_name"
+dst_submit: 2000
+dst_thread_num: 1
+sync_type: "MERGE_INTO_UPDATE"
+#sync_type: "MERGE_INTO_ONLY"
+#sync_type: "DELETE"
+dbbeans:
+  - name: srcBean
+    user_name: "zyh"
+    pass_word: "zyh"
+    tns: "jdbc:mysql://10.1.12.79:3306/resource_service?useUnicode=true&serverTimezone=GMT%2B8"
+    dbType: "MYSQL8"
+  - name: dstBean
+    user_name: "cctsys_dev"
+    pass_word: "TyM*2CnEm"
+    tns: "jdbc:oracle:thin:@10.1.8.99:1521/orcl12cpdb1"
+    dbType: "ORACLE"

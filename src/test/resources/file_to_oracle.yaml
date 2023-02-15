@@ -1,0 +1,25 @@
+#=====================
+#nmc_schema
+#=====================
+#tab_fields: "SCHEMA_NAME,SCHEMA_TYPE,NAME_SPACE,STATUS,CREATE_USER,CREATE_DATE,MODIFY_USER,MODIFY_DATE,COMMENTS,AVSC"
+#tab_name: "nmc_schema_test20220217"
+#file_name_keyword: "nmc_schema"
+#file_endwith: "txt"
+#file_split_str: "#OTFT#"
+#file_line_end: "#NEWLAND@BI_LINE_END#"
+#=====================
+#rl_broadband_users
+#=====================
+tab_fields: "HOME_CITY,PREEXIT_TIME,IS_CHANGE_EQUIP,ONU_TYPE"
+tab_name: "rl_broadband_users"
+file_name_keyword: "rl_broadband_users"
+file_endwith: "txt"
+file_split_str: "#OTFT#"
+file_line_end: "#NEWLAND@BI_LINE_END#"
+file_path: "d:\\tmp\\data\\oracle_to_file\\"
+dbbeans:
+  - name: srcBean
+    user_name: "web"
+    pass_word: "T%vdNV#i$2"
+    tns: "jdbc:oracle:thin:@10.1.0.242:1521/ywxx"
+    dbType: "ORACLE"

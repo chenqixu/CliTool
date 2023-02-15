@@ -1,0 +1,21 @@
+src_tab_name: "qry_sell_operator"
+dst_tab_name: "rl_qry_sell_operator"
+tab_fields: "sell_id,task_id,org_id,create_time"
+src_where: "create_time between to_timestamp('[_data_pre_hour]0000','yyyymmddhh24miss') and to_timestamp('[_data_pre_hour]5959','yyyymmddhh24miss')"
+dst_submit: 2000
+dst_thread_num: 1
+#sync_type: "MERGE_INTO_UPDATE"
+#sync_type: "MERGE_INTO_ONLY"
+#sync_type: "DELETE"
+pks: "sell_id,task_id"
+dbbeans:
+  - name: srcBean
+    user_name: "bishow"
+    pass_word: "C%MuhN#q$4"
+    tns: "jdbc:oracle:thin:@10.1.0.242:1521/ywxx"
+    dbType: "ORACLE"
+  - name: dstBean
+    user_name: "label_core"
+    pass_word: "admin"
+    tns: "jdbc:postgresql://10.1.8.206:5432/label_core"
+    dbType: "POSTGRESQL"

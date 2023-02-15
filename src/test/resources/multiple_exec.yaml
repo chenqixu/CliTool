@@ -1,0 +1,58 @@
+multiple_exec:
+  - name: truncate_table
+    type: jdbc
+  - name: clean_file
+    type: exec_shell
+  - name: oracle_to_local
+    type: oracle_to_file
+  - name: copy
+    type: postgresql_copy
+  - name: analyze
+    type: jdbc
+
+truncate_table:
+  sql:
+    - "truncate table rl_broadband_users"
+  dbbeans:
+    - name: srcBean
+      user_name: "label_core"
+      pass_word: "admin"
+      tns: "jdbc:postgresql://10.1.8.206:5432/label_core"
+      dbType: "POSTGRESQL"
+clean_file:
+  cmd:
+    - "del D:\\Document\\Workspaces\\Git\\FujianBI\\etl-jstorm\\nl-rt-jstorm-fujianbi-tool\\target\\data0.txt"
+    - "del D:\\Document\\Workspaces\\Git\\FujianBI\\etl-jstorm\\nl-rt-jstorm-fujianbi-tool\\target\\data1.txt"
+  file.encoding: "GBK"
+oracle_to_local:
+  tab_fields: "home_city,preexit_time,is_change_equip,onu_type"
+  tab_name: "rl_broadband_users"
+  src_where:
+  file_name: "D:\\Document\\Workspaces\\Git\\FujianBI\\etl-jstorm\\nl-rt-jstorm-fujianbi-tool\\target\\data"
+  thread_num: 2
+  dbbeans:
+    - name: srcBean
+      user_name: "frtbase"
+      pass_word: "frtbase"
+      tns: "jdbc:oracle:thin:@10.1.8.204:1521/orapri"
+      dbType: "ORACLE"
+copy:
+  copy_file_path: "D:/Document/Workspaces/Git/FujianBI/etl-jstorm/nl-rt-jstorm-fujianbi-tool/target"
+  copy_file_key: "data"
+  copy_file_endwith: "txt"
+  table_name: "rl_broadband_users"
+  dbbeans:
+    - name: srcBean
+      user_name: "label_core"
+      pass_word: "admin"
+      tns: "jdbc:postgresql://10.1.8.206:5432/label_core"
+      dbType: "POSTGRESQL"
+analyze:
+  sql:
+    - "analyze rl_broadband_users"
+  dbbeans:
+    - name: srcBean
+      user_name: "label_core"
+      pass_word: "admin"
+      tns: "jdbc:postgresql://10.1.8.206:5432/label_core"
+      dbType: "POSTGRESQL"

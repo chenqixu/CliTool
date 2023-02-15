@@ -1,0 +1,16 @@
+sql:
+  - "select count(1) from rl_broadband_users"
+  - "select count(1) from rl_broadband_users where home_city=591"
+  - "analyze rl_broadband_users"
+  - "VACUUM analyze rl_broadband_users"
+auto_commit: true
+dbbeans:
+  - name: srcBean
+    user_name: "label_core"
+    pass_word: "admin"
+    tns: "jdbc:postgresql://10.1.8.206:5432/label_core"
+    dbType: "POSTGRESQL"
+#    user_name: "frtbase"
+#    pass_word: "frtbase"
+#    tns: "jdbc:oracle:thin:@10.1.8.204:1521/orapri"
+#    dbType: "ORACLE"

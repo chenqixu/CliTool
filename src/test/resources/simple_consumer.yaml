@@ -1,0 +1,14 @@
+kafkaconf.bootstrap.servers: "10.1.8.200:9092,10.1.8.201:9092,10.1.8.202:9092"
+kafkaconf.key.deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+kafkaconf.value.deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+kafkaconf.security.protocol: "SASL_PLAINTEXT"
+kafkaconf.sasl.mechanism: "PLAIN"
+kafkaconf.group.id: "test_group"
+kafkaconf.enable.auto.commit: "true"
+kafkaconf.fetch.min.bytes: "52428800"
+kafkaconf.max.poll.records: "12000"
+kafkaconf.newland.kafka_username: admin
+kafkaconf.newland.kafka_password: admin
+kafkaconf.newland.print.cnt: 1
+topic: z_2_hdfs
+record.output.path: C:\Users\Administrator\Desktop\comm\\output

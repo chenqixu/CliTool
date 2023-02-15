@@ -1,0 +1,40 @@
+keytab: "/bi/app/hacluster/keytab/edc_base.keytab"
+requestRefId: "TSREQ_201601010809108632A"
+secretId: "10070"
+empowerNo: "67c03074fc"
+urlPath: "http://xxx.xxx.xxx.xxx:xxxx/creditService/services/touchstonecreditservice/sync/productCode"
+timerule: "[_data_hour]"
+dstPath: "/user/edc_base/zhy"
+hdfsConfPath: "/Users/zhenghanyu/Documents/WorkSpace/etl-jstorm/nl-rt-jstorm-fujianbi-tool/src/test/resources/hacluster"
+SftpPtah: "/user/edc_base/zhy/"
+LocalPtah: "/Users/zhenghanyu/"
+SecretKey: "Yu2x5tFEQRqd52cd58okTECW2TYXA3TD"
+nThreads: 2
+phone: "18850410818"
+
+
+ftpbeans:
+  - name: shangHaiSftp
+    type: SFTP
+    user_name: "edc_base"
+    pass_word: "fLyxp1s*"
+    host: "10.1.8.203"
+    port: 22
+#pro
+#keytab: "/bi/app/hacluster/keytab/edc_base.keytab"
+#requestRefId: "TSREQ_201601010809108632A"
+#secretId: "10070"
+#empowerNo: "67c03074fc"
+#urlPath: "http://xxx.xxx.xxx.xxx:xxxx/creditService/services/touchstonecreditservice/sync/productCode"
+#timerule: "[_data_hour]"
+#dstPath: "/user/edc_base/zhy/"
+#SftpPtah: "/bill_cmcc_prov/"
+#LocalPtah: "/Users/zhenghanyu/"
+#hdfsConfPath: "/Users/zhenghanyu/Documents/WorkSpace/etl-jstorm/nl-rt-jstorm-fujianbi-tool/src/test/resources/hacluster"
+#ftpbeans:
+#  - name: shangHaiSftp
+#    type: SFTP
+#    user_name: "sftp_cmcc"
+#    pass_word: "EverGj123#@!"
+#    host: "10.252.60.76"
+#    port: 22

@@ -1,0 +1,8 @@
+redis_conf: "10.1.8.200:30011"
+operation: "get"
+pipeline: true
+password: "by7JqR_k"
+mode: 1
+key:
+ - "status:kafka_single_partition_sync_users"
+ - "status:kafka_single_partition_sync_itv_users"

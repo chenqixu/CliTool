@@ -1,0 +1,19 @@
+src_tab_name: "dws_cus_rail_network_list"
+dst_tab_name: "dws_cus_rail_network_list"
+tab_fields: "SUM_DATE,HOME_CITY,HOME_COUNTY,CREATE_ID,KPI_CODE,USER_ID,MSISDN,ARCHIVES_CREATE_TIME,CREATE_TIME,BUSINESS_CREATE_TIME"
+src_where: "sum_date='[_data_pre_hour]'"
+dst_submit: 15
+dst_thread_num: 2
+sync_type: "DELETE"
+pks: ""
+dbbeans:
+  - name: srcBean
+    user_name: "label_core"
+    pass_word: "admin"
+    tns: "jdbc:postgresql://10.1.8.206:5432/label_core"
+    dbType: "POSTGRESQL"
+  - name: dstBean
+    user_name: "mktbi"
+    pass_word: "H%OwNn#q$8"
+    tns: "jdbc:oracle:thin:@10.1.0.242:1521/ywxx"
+    dbType: "ORACLE"

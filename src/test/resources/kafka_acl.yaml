@@ -1,0 +1,8 @@
+zookeeper: "edc-mqc-01:2181"
+#模式
+#TOPIC_MODEL，查看话题权限，默认
+#GROUP_MODEL，查看消费组权限
+#mode: "TOPIC_MODEL"
+mode: "GROUP_MODEL"
+topic: "USER_PRODUCT"
+group: "new_consumer_api"

@@ -1,0 +1,36 @@
+multiple_exec:
+  - name: data_sync
+    type: data_sync
+  - name: gather_table_stats
+    type: jdbc
+
+data_sync:
+  src_tab_name: "dws_cus_rail_network_list"
+  dst_tab_name: "dws_cus_rail_network_list"
+  tab_fields: "sum_date,home_city,home_county,create_id,kpi_code,user_id,msisdn,archives_create_time,create_time,business_create_time"
+  src_where: "sum_date='[_data_pre_hour]'"
+  dst_submit: 15
+  dst_thread_num: 2
+  sync_type: "DELETE"
+  pks: ""
+  dbbeans:
+    - name: srcBean
+      user_name: "label_core"
+      pass_word: "admin"
+      tns: "jdbc:postgresql://10.1.8.206:5432/label_core"
+      dbType: "POSTGRESQL"
+    - name: dstBean
+      user_name: "cctsys_dev"
+      pass_word: "TyM*2CnEm"
+      tns: "jdbc:oracle:thin:@10.1.8.99:1521/orcl12cpdb1"
+      dbType: "ORACLE"
+gather_table_stats:
+  sql:
+    - "CALL DBMS_STATS.GATHER_TABLE_STATS('CCTSYS_DEV','DWS_CUS_RAIL_NETWORK_LIST')"
+  auto_commit: true
+  dbbeans:
+    - name: srcBean
+      user_name: "cctsys_dev"
+      pass_word: "TyM*2CnEm"
+      tns: "jdbc:oracle:thin:@10.1.8.99:1521/orcl12cpdb1"
+      dbType: "ORACLE"
